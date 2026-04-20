@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moflio Corp Internal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div>
+          <h1>Moflio Corp Internal</h1>
+          <p>Portal interno de autenticación y auditoría</p>
+        </div>
+      </div>
+      <div class="topbar-badge">Acceso Corporativo</div>
+    </header>
+
+    <main class="main-content">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <span class="eyebrow">Área restringida</span>
+          <h2>Bienvenido al portal interno</h2>
+          <p>
+            Inicie sesión con sus credenciales corporativas para acceder a módulos
+            de auditoría, trazabilidad y herramientas internas.
+          </p>
+
+          <ul class="feature-list">
+            <li>Autenticación interna de usuarios</li>
+            <li>Auditoría de accesos y trazabilidad</li>
+            <li>Paneles de revisión operativa</li>
+          </ul>
+        </div>
+
+        <div class="login-card" id="loginSection">
+          <div class="card-header">
+            <h3>Iniciar sesión</h3>
+            <p>Use sus credenciales asignadas</p>
+          </div>
+
+          <form id="loginForm" class="login-form" autocomplete="off">
+            <div class="form-group">
+              <label for="username">Usuario</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Ej. jlopez"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Ingrese su contraseña"
+                required
+              />
+            </div>
+
+            <button type="submit" class="btn-primary">Acceder</button>
+
+            <div id="loginMessage" class="login-message" aria-live="polite"></div>
+          </form>
+
+          <div class="login-hint">
+            <strong>Soporte interno:</strong> Si tiene inconvenientes con el acceso,
+            contacte al equipo de operaciones corporativas.
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboardSection" class="dashboard hidden">
+        <div class="dashboard-card">
+          <div class="dashboard-header">
+            <div>
+              <span class="eyebrow">Panel interno</span>
+              <h2 id="panelTitle">Dashboard</h2>
+            </div>
+            <button id="logoutBtn" class="btn-secondary">Cerrar sesión</button>
+          </div>
+
+          <div id="panelContent" class="panel-content"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Moflio Corp. Internal systems only.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
